@@ -171,8 +171,11 @@ Many thanks to [@bradtraversy](https://github.com/bradtraversy) for his awesome 
 
 
 docker pull postgres
+
 docker network create <network name>
+
 docker run --name postgresdb -e POSTGRES_DB=admin -e POSTGRES_USER=admin -e POSTGRES_PASSWORD=admin -e POSTGRES_HOST=postgres-db -p 5432:5432 --network <network name> postgres
 
 docker build -t <docker image name> .
+
 docker run --name real-app2 -p 8001:8000 --network <network name> <docker image name>
